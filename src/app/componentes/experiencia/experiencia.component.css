@@ -1,0 +1,22 @@
+.experiencia ul li {
+    margin:0 0 2% 0;
+}
+.expAvatar {
+    height: 100px;
+    width:100px;
+    margin: 0 10px 0 0;
+}
+.experiencia {
+    padding:0 2% 2% 2%;
+}
+
+.experiencia:first-child {
+    padding-top:2%;
+}
+.experiencia article { 
+    border-bottom:1px #b6b6b6 solid;
+    padding:0 0 2% 0;
+}
+.experiencia h4 {
+    font-size:18px;
+}

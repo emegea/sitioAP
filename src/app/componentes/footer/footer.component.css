@@ -1,0 +1,36 @@
+.nav {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding:0.5;
+    display:flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    align-items:center;
+    width:100%;
+    margin:0;
+    padding:0 2%;
+}
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.socialmediaul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.socialmediali {
+    list-style:none;
+    margin:0.5em;
+}
+.logosocial {
+    font-size:28px;
+}
+.logosocial {
+    height:50px;
+    align-items:center;
+    display:flex;
+}

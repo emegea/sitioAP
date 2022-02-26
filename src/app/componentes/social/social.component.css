@@ -1,0 +1,27 @@
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.socialmedia ul, .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.socialmedia li, .menu li {
+    list-style:none;
+    margin:0.5em;
+}
+.socialmedia a {
+    font-size:28px;
+}
+.logosocialanchor {
+    text-decoration:none;
+    color:#fff;
+}
+.logosocial, .social {
+    height:50px;
+    align-items:center;
+    display:flex;
+}

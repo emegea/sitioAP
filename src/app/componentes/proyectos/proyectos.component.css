@@ -1,0 +1,18 @@
+.proyectos ul li {
+    margin:0 0 2% 0;
+}
+
+.proyecto {
+    padding:0 2% 2% 2%;
+}
+
+.proyecto:first-child {
+    padding-top:2%;
+}
+.proyecto article { 
+    border-bottom:1px #b6b6b6 solid;
+    padding:0 0 2% 0;
+}
+.proyecto h4 {
+    font-size:18px;
+}

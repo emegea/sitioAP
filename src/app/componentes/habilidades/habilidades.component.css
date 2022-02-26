@@ -1,0 +1,22 @@
+.habilidades ul li {
+    margin:0 0 2% 0;
+}
+.eduAvatar {
+    height: 100px;
+    width:100px;
+    margin: 0 10px 0 0;
+}
+.habilidad {
+    padding:0 2% 2% 2%;
+}
+
+.habilidad:first-child {
+    padding-top:2%;
+}
+.habilidad article { 
+    border-bottom:1px #b6b6b6 solid;
+    padding:0 0 2% 0;
+}
+.habilidad h4 {
+    font-size:18px;
+}
