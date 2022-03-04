@@ -57,7 +57,6 @@
 .insignias li a:hover > img { 
     padding:0;
 }
-
 .insignias li a img {
     margin:0 10px 0 0;
     padding:5px;
@@ -66,5 +65,9 @@
 .insignias li a img:hover {
     box-shadow:0px 0px 15px 5px rgb(0 0 0 / 50%);
 }
-.titulo h2 { display:flex; }
+.card { padding:4%; }
+.card div { display:flex; justify-content:space-between; }
+.titulo { padding:0 0 2% 0; }
 .titulo span { font-size:22px; display:flex; align-items:center; }
+.quiensoyContenido ul { justify-content:center; flex-direction:column; }
+.quiensoyContenido ul li { display:flex; justify-content:flex-end; margin:0 0 5% 0; }
