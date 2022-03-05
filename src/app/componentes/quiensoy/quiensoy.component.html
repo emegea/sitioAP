@@ -1,36 +1,38 @@
 <section class="flexin quiensoy col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="avatar">
-        <img class="img-fluid" src="/assets/img/avatar.jpg" alt="Martín Andriuolo">
-        <a href="#" (click)="saludo()">
+        <img class="img-fluid" 
+            [src]="datos.QuienSoy[0].avatar" 
+            title="{{ datos.QuienSoy[0].nombre }}"
+            alt="{{ datos.QuienSoy[0].nombre }}"
+        />
+        <a href="#">
             <i class="fa fa-pen iconito"></i>
         </a>
     </div>
     <div class="resumen">
-        <h2 class="titulo">Martín Andriuolo</h2>
-        <h3>FullStack Developer Jr, Diseñador Gráfico</h3>
-        <p>General Rodríguez, Buenos Aires (Argentina)</p>      
+        <h2 class="titulo">{{ datos.QuienSoy[0].nombre }}</h2>
+        <h3>{{ datos.QuienSoy[0].puesto }}</h3>
+        <p>{{ datos.QuienSoy[0].ubicacion }}</p>      
         <ul>
-            <li><a href=""><i class="fa fa-envelope"></i><p>martinandriuolo@gmail.com</p></a></li>
-            <li><a href=""><i class="fa-brands fa-whatsapp"></i><p>+54 9 11 5758 5934</p></a></li>
+            <li>
+                <a href="">
+                    <i class="fa fa-envelope"></i>
+                    <p>{{ datos.QuienSoy[0].email }}</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>{{ datos.QuienSoy[0].telefono }}</p>
+                </a>
+            </li>
         </ul>  
     </div>
     <ul class="insignias">
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="/assets/img/eal.jpg" alt="Tecnico en Diseño Gráfico">
-                <p>Tecnicatura en<br>Diseño Gráfico</p>
-            </a>
-        </li>
-        <li>
-            <a href="https://mumuki.io/argentina-programa/certificates/verify/JFfyPDYM1Et8Vw8X" target="_blank">
-                <img class="img-fluid" src="/assets/img/argprog.jpg" alt="Argentina Programa">
-                <p>Argentina Programa<br>#YoProgramo</p>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.freecodecamp.org/certification/emegea/responsive-web-design" target="_blank">
-                <img class="img-fluid" src="/assets/img/freecodecamp.jpg" alt="Free Code Camp">
-                <p>Responsive<br>Web Design</p>
+        <li *ngFor="let insignia of insigniasLista">
+            <a href="{{ insignia.link }}" title="{{ insignia.alt }}">
+                <img class="img-fluid" [src]="insignia.imagen" />
+                <p [innerHTML]="insignia.titulo"></p>
             </a>
         </li>
     </ul>
@@ -50,41 +52,15 @@
         </a>
     </div>
     <div class="quiensoyContenido col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
-            Mi nombre es Martín Andriuolo. Nací en el seno de una familia obrera en el año 1987
-            el día de la música, lo que me llevó a amarla desde antes de tener uso de razón.
-            Éste fué mi primer contacto y que expandiría mi curiosidad por el arte.  
-            Me "eduqué" en una escuela primaria pública con el sistema EGB. Luego cursé mis 
-            estudios secundarios en una escuela media pública orientada en Arte, Diseño y Comunicación. 
-            Al mismo tiempo empecé a tocar guitarra y estudiar música de forma autodidacta.
-            <br>
-            <br>
-            Comencé mi experiencia en el mundo laboral en un cyber en el año 2007 en donde 
-            empecé a tener contacto con software de edición de imagen, audio, video y algo de código. 
-            Me ganaba algún dinero extra haciendo trabajos de diseño simples para conocidos como 
-            tarjetas de invitación para cumpleaños, folletos, tarjetas y presentaciones en PDF o PowerPoint. 
-            Creé mi primer sitio web, como hobbie, con un servicio gratuito que se llamaba FreeWebs,
-            en donde colgaba imágenes y videos de mi grupo de amigos ya que practicabamos skate y era divertido. 
-            Supe que era por ahí, así que comencé a curiosear. 
-            <br>
-            <br>
-            Trabajé en un estudio de radio local, lo cual me dio tiempo para seguir 
-            investigando y teniendo contacto con software. 
-            A estas alturas ya tenía un nivel un poco más avanzado en diseño y código (HTML y CSS), 
-            así que generaba más ingresos y ya era capaz de hacer pequeños sitios web 
-            decentes para poder venderlos a pequeños emprendedores, incluso hubo un tiempo en 
-            que hacía el stream de la radio.
-            Así que decidí empezar a perfilarme como desarrollador web y diseñador gráfico. 
-            Entonces creé el nombre de mi emprendimiento <b>Emegea</b>.
-            <br>
-            <br>
-            Algunos años después, conocí la Escuela de Arte "José 'Pipo' Ferrari" de Lujan
-            (Buenos Aires) y decidí hacer la carrera de Diseño Gráfico en 2016.
-            Termine de cursar en 2020 y conocí Argentina Programa, así que decidí retomar mi viejo
-            anhleo de convertirme en programador web.
-        </p>
+        <p class="col-xs-12 col-sm-8 col-md-8 col-lg-7" [innerHTML]="datos.QuienSoy[0].acercaDe"></p>
         <ul class="flexin col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <li><img class="img-fluid" src="/assets/img/emegea.jpg" alt="Martín Andriuolo"></li>
+            <li>
+                <img class="img-fluid" 
+                    [src]="datos.QuienSoy[0].avatar" 
+                    title="{{ datos.QuienSoy[0].nombre }}"
+                    alt="{{ datos.QuienSoy[0].nombre }}"
+                />
+            </li>
         </ul>
     </div>
    

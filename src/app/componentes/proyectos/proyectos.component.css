@@ -16,3 +16,18 @@
 .proyecto h4 {
     font-size:18px;
 }
+.mostrarModal {
+    position: relative;
+    left: 50%;
+    right: -50%;
+    top: -50%;
+    bottom: -50%;
+    margin: auto;
+    min-height: 10%;
+    min-width: 10%;
+    opacity: 0%;
+}
+.oscurece:hover { filter:brightness(50%); }
+.oscurece:hover + .mostrarModal { opacity:100%; }
+.oscurece:hover .mostrarModal { opacity:100%; }
+.mostrarModal:hover { opacity:100%; }

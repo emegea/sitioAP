@@ -11,36 +11,19 @@
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul>
-<li class="educacion">
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <img src="/assets/img/eal.jpg" alt="" class="agranda eduAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
-        <div>
-            <h3>Tecnicatura en Diseño Gráfico</h3>
-            <p>Escuela de Arte José "Pipo" Ferrari</p>
-            <h4>2016 - 2020</h4>
-            <h4>Lujan, Buenos Aires (Argentina)</h4>
-        </div>
-    </div>
-    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-<li class="educacion">
+    <li class="educacion" *ngFor="let educacion of educacionLista">
     <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-            <img src="/assets/img/secundaria.jpg" alt="" class="agranda eduAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
+            <img 
+                [src]="educacion.imagen" 
+                alt="" 
+                class="agranda eduAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"
+            />
             <div>
-                <h3>Bachillerato con orientación en Arte, Diseño y Comunicación</h3>
-                <p>Escuela de Educación Media Nº1 "Combatientes de Malvinas"</p>
-                <h4>2003 - 2007</h4>
-                <h4>General Rodríguez, Buenos Aires (Argentina)</h4>
+                <h3>{{educacion.titulo}}</h3>
+                <p>{{educacion.instituto}}</p>
+                <h4>{{educacion.fecha}}</h4>
+                <h4>{{educacion.localidad}}</h4>
             </div>
         </div>
         <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
@@ -52,26 +35,5 @@
             </a>
         </div>
     </article>
-</li>
-<li class="educacion">
-    <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-            <img src="/assets/img/primaria.jpg" alt="" class="agranda eduAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
-            <div>
-                <h3>Educación Primaria</h3>
-                <p>Escuela Nº1 "Bartolomé Mitre"</p>
-                <h4>1993 - 2002</h4>
-                <h4>General Rodríguez, Buenos Aires (Argentina)</h4>
-            </div>
-        </div>
-        <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-            <a href="#">
-                <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-            </a>
-            <a href="#">
-                <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-            </a>
-        </div>
-    </article>
-</li>
+    </li>
 </ul>

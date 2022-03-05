@@ -1,0 +1,123 @@
+{
+	"QuienSoy": [{
+		"avatar": "./assets/img/avatar.jpg",
+		"nombre": "Martín Andriuolo",
+		"puesto": "FullStack Developer Jr, Diseñador Gráfico",
+		"ubicacion": "General Rodríguez, Buenos Aires (Argentina)",
+		"email": "martinandriuolo@gmail.com",
+		"telefono": "+54 9 11 5758 5934",
+		"backImage": "./assets/img/fondo.jpg",
+		"acercaDe": "Mi nombre es Martín Andriuolo. Nací en el seno de una familia obrera en el año 1987 el día de la música, lo que me llevó a amarla desde antes de tener uso de razón. Éste fué mi primer contacto y que expandiría mi curiosidad por el arte. Me 'eduqué' en una escuela primaria pública con el sistema EGB. Luego cursé mis estudios secundarios en una escuela media pública orientada en Arte, Diseño y Comunicación. Al mismo tiempo empecé a tocar guitarra y estudiar música de forma autodidacta. <br><br>Comencé mi experiencia en el mundo laboral en un cyber en el año 2007 en donde empecé a tener contacto con software de edición de imagen, audio, video y algo de código. Me ganaba algún dinero extra haciendo trabajos de diseño simples para conocidos como tarjetas de invitación para cumpleaños, folletos, tarjetas y presentaciones en PDF o PowerPoint. Creé mi primer sitio web, como hobbie, con un servicio gratuito que se llamaba FreeWebs, en donde colgaba imágenes y videos de mi grupo de amigos ya que practicabamos skate y era divertido. Supe que era por ahí, así que comencé a curiosear. <br><br>Trabajé en un estudio de radio local, lo cual me dio tiempo para seguir investigando y teniendo contacto con software. A estas alturas ya tenía un nivel un poco más avanzado en diseño y código (HTML y CSS), así que generaba más ingresos y ya era capaz de hacer pequeños sitios web decentes para poder venderlos a pequeños emprendedores, incluso hubo un tiempo en que hacía el stream de la radio. Así que decidí empezar a perfilarme como desarrollador web y diseñador gráfico. Entonces creé el nombre de mi emprendimiento <b>Emegea</b>. <br><br>Algunos años después, en 2016, conocí la Escuela de Arte 'José 'Pipo' Ferrari' de Luján (Buenos Aires) y decidí hacer la carrera de Diseño Gráfico. Termine de cursar en 2020 y conocí Argentina Programa, así que decidí retomar mi viejo anhleo de convertirme en programador web."
+	}],
+
+	"Insignias": [{
+		"titulo": "Tecnicatura en <br>Diseño Gráfico",
+		"link": "#",
+		"imagen": "./assets/img/eal.jpg",
+		"alt": "Tecnicatura en Diseño Gráfico"
+	},
+	{
+		"titulo": "Argentina Programa <br>#YoProgramo",
+		"link": "https://mumuki.io/argentina-programa/certificates/verify/JFfyPDYM1Et8Vw8X",
+		"imagen": "./assets/img/argprog.jpg",
+		"alt": "Argentina Programa #YoProgramo"
+	},
+	{
+		"titulo": "Responsive <br>Web Design",
+		"link": "https://www.freecodecamp.org/certification/emegea/responsive-web-design",
+		"imagen": "./assets/img/freecodecamp.jpg",
+		"alt": "Responsive Web Design - FreeCodeCamp"
+	}],
+
+	"Experiencia": [{
+		"titulo": "Emegea - Desarrollo Web",
+		"link": "https://www.emegea.tk/",
+		"imagen": "./assets/img/emegea.jpg",
+		"puesto": "FrontEnd Developer | Diseñador Gráfico - Jornada Completa",
+		"fecha": "Enero 2013 - Actualidad",
+		"localidad": "General Rodríguez, Buenos Aires (Argentina)"
+	},
+	{
+		"titulo": "FM El Vecinal",
+		"link": "https://www.elvecinal.com.ar/",
+		"imagen": "./assets/img/elvecinal.jpg",
+		"puesto": "Operación Técnica - Jornada Parcial",
+		"fecha": "Enero 2010 - Marzo 2013 - (3 años)",
+		"localidad": "General Rodríguez, Buenos Aires (Argentina)"
+	},
+	{
+		"titulo": "Apocalipsis Cyber",
+		"link": "#",
+		"imagen": "./assets/img/apocalipsis.jpg",
+		"puesto": "Atención al Público - Jornada Parcial",
+		"fecha": "Octubre 2007 - Diciembre 2009 (2 años)",
+		"localidad": "General Rodríguez, Buenos Aires (Argentina)"
+	}],
+
+	"Educacion": [{
+		"titulo": "Tecnicatura en Diseño Gráfico",
+		"link": "https://ealujan-bue.infd.edu.ar/sitio/",
+		"imagen": "./assets/img/eal.jpg",
+		"instituto": "Escuela de Arte José 'Pipo' Ferrari",
+		"fecha": "2016 - 2020",
+		"localidad": "Luján, Buenos Aires (Argentina)"
+	},
+	{
+		"titulo": "Bachillerato con orientación en Arte, Diseño y Comunicación",
+		"link": "#",
+		"imagen": "./assets/img/secundaria.jpg",
+		"instituto": "Escuela de Educación Media Nº1 'Combatientes de Malvinas'",
+		"fecha": "2003 - 2007",
+		"localidad": "General Rodríguez, Buenos Aires (Argentina)"
+	},
+	{
+		"titulo": "Educación Primaria",
+		"link": "#",
+		"imagen": "./assets/img/primaria.jpg",
+		"instituto": "Escuela Nº1 Bartolomé Mitre",
+		"fecha": "1993 - 2002",
+		"localidad": "General Rodríguez, Buenos Aires (Argentina)"
+	}],
+
+	"Habilidades": [{
+		"titulo": "Diseño Gráfico",
+		"porcentaje": "80",
+		"herramientas": "Photoshop, Illustrator, InDesign, Premiere, After Effects. Mano Alzada.",
+		"implementacion": "Selección tipográfica, Investigación, Conocimiento de historia del arte, Buen gusto.",
+		"criterio": "Empatia con la contraparte, Brief, Briefing, Branding. Manos a la obra."
+	},
+	{
+		"titulo": "Desarrollo FrontEnd Gráfico",
+		"porcentaje": "50",
+		"herramientas": "HTML5, CSS3, jQuery, Bootstrap, Javascript, Angular, MySQL, Wordpress.",
+		"implementacion": "Diseño, Maquetación, Programación.",
+		"criterio": "Código óptimo y legible, Menor peso posible, SEO."
+	},
+	{
+		"titulo": "Desarrollo Backend",
+		"porcentaje": "15",
+		"herramientas": "Aprendiendo.",
+		"implementacion": "Aprendiendo.",
+		"criterio": "Aprendiendo."
+	}],
+	"Proyectos": [{
+		"titulo": "Metronet",
+		"descripcion": "Diseño de Flyer para redes sociales.",
+		"imagen": "./assets/img/proyectos-01.jpg"
+	},
+	{
+		"titulo": "Global Filter",
+		"descripcion": "Diseño de imagotipo institucional.",
+		"imagen": "./assets/img/proyectos-02.jpg"
+	},
+	{
+		"titulo": "Kuka Manka",
+		"descripcion": "Diseño de Flyer para impresión",
+		"imagen": "./assets/img/proyectos-03.jpg"
+	},
+	{
+		"titulo": "Gasotex",
+		"descripcion": "Diseño de logotipo institucional.",
+		"imagen": "./assets/img/proyectos-04.jpg"
+	}]
+}

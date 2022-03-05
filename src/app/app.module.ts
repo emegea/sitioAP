@@ -12,6 +12,8 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { FooterComponent } from './componentes/footer/footer.component';
 import { SocialComponent } from './componentes/social/social.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { SocialComponent } from './componentes/social/social.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

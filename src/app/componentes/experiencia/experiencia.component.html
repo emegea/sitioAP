@@ -11,15 +11,19 @@
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul>
-<li class="experiencia">
+<li class="experiencia" *ngFor="let experiencia of experienciasLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <img src="/assets/img/emegea.jpg" alt="" class="agranda expAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
+        <img 
+            [src]="experiencia.imagen" 
+            alt="{{ experiencia.titulo }}" 
+            class="agranda expAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"
+        />
         <div>
-            <h3>Emegea - Desarrollo Web</h3>
-            <p>FrontEnd Developer | Diseñador Gráfico - Jornada completa</p>
-            <h4>Enero 2013 - Actualidad</h4>
-            <h4>General Rodríguez, Buenos Aires (Argentina)</h4>
+            <h3>{{ experiencia.titulo }}</h3>
+            <p>{{ experiencia.puesto }}</p>
+            <h4>{{ experiencia.fecha }}</h4>
+            <h4>{{ experiencia.localidad }}</h4>
         </div>
     </div>
     <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
@@ -31,47 +35,4 @@
         </a>
     </div>
 </article>
-</li>
-<li class="experiencia">
-    <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-            <img src="/assets/img/elvecinal.jpg" alt="" class="agranda expAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
-            <div>
-                <h3>FM El Vecinal</h3>
-                <p>Operación Técnica - Jornada parcial</p>
-                <h4>Enero 2010 - Marzo 2013 - 3 años</h4>
-                <h4>General Rodríguez, Buenos Aires (Argentina)</h4>
-            </div>
-        </div>
-        <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-            <a href="#">
-                <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-            </a>
-            <a href="#">
-                <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-            </a>
-        </div>
-    </article>
-</li>
-<li class="experiencia">
-    <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-            <img src="/assets/img/freecodecamp.jpg" alt="" class="agranda expAvatar col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
-            <div>
-                <h3>Apocalypsis Cyber</h3>
-                <p>Atención al Público - Jornada parcial</p>
-                <h4>Octubre 2007 - Diciembre 2009</h4>
-                <h4>General Rodríguez, Buenos Aires (Argentina)</h4>
-            </div>
-        </div>
-        <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-            <a href="#">
-                <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-            </a>
-            <a href="#">
-                <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-            </a>
-        </div>
-    </article>
-</li>
 </ul>

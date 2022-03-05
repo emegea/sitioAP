@@ -11,61 +11,19 @@
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul class="flexin habilidades">
-<li>
+<li *ngFor="let proyecto of proyectosLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
         <div>
-            <h3>Proyecto 1</h3>
-            <img src="/assets/img/proyectos-01.jpg" class="img-fluid">
-            <p>Pixar - Jornada parcial</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-<li>
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <div>
-            <h3>Proyecto 1</h3>
-            <img src="/assets/img/proyectos-02.jpg" class="img-fluid">
-            <p>Pixar - Jornada parcial</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-<li>
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <div>
-            <h3>Proyecto 1</h3>
-            <img src="/assets/img/proyectos-03.jpg" class="img-fluid">
-            <p>Pixar - Jornada parcial</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-<li>
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <div>
-            <h3>Proyecto 1</h3>
-            <img src="/assets/img/proyectos-04.jpg" class="img-fluid">
-            <p>Pixar - Jornada parcial</p>
+            <h3>{{proyecto.titulo}}</h3>
+            <img 
+                [src]="proyecto.imagen"
+                class="img-fluid oscurece"
+                alt="{{ proyecto.titulo }}"
+            >
+            <i class="fa fa-plus iconito mostrarModal" onclick="showEditProfileModal()"></i>
+
+            <p>{{proyecto.descripcion}}</p>
         </div>
     </div>
     <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">

@@ -11,17 +11,25 @@
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul>
-<li class="habilidad">
+<li class="habilidad" *ngFor="let habilidad of habilidadesLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
         <div>
-            <h3>Diseño Gráfico</h3>
+            <h3>{{ habilidad.titulo }}</h3>
             <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div 
+                    class="progress-bar progress-bar-striped bg-success"
+                    role="progressbar"
+                    style="width:80%"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                >
+                </div>
             </div>
-            <p>Herramientas: Photoshop, Illustrator, InDesign, Premiere, After Effects. Mano Alzada
-            <br>Implementación: Selección tipográfica, Investigación, Conocimiento de historia del arte, Buen gusto.
-            <br>Criterio: Empatia con la contraparte, Brief, Briefing, Branding. Manos a la obra.
+            <p>Herramientas: {{ habilidad.herramientas }}
+            <br>Implementación: {{ habilidad.implementacion }}
+            <br>Criterio: {{ habilidad.criterio }}
             </p>
         </div>
     </div>
@@ -34,52 +42,6 @@
         </a>
     </div>
 </article>
-</li>
-<li class="habilidad">
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <div>
-            <h3>Desarrollo FrontEnd</h3>
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p>Herramientas: HTML5, CSS3, jQuery, Javascript, Angular, Wordpress.
-            <br>Implementación: Diseño, Maquetación, Programación.
-            <br>Criterio: Código óptimo y legible, Menor peso posible, SEO. 
-            </p>
-        </div>
-    </div>
-    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-<li class="habilidad">
-<article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
-        <div>
-            <h3>Desarrollo Backend</h3>
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <p>cri cri cri...</p>
-        </div>
-    </div>
-    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
-        <a href="#">
-            <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
-        </a>
-    </div>
-</article>
-</li>
-            
+
 </ul>
 </section>
