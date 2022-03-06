@@ -23,8 +23,24 @@ a:hover { color:#80063f; }
 .agranda { padding:5px; transition:ease-in-out .2s; }
 .agranda:hover { padding:0px; transition:ease-in-out .2s; box-shadow: 0px 0px 30px 10px rgb(200 10 100 / 20%); }
 .iconitos { display:flex; justify-content:flex-end; }
-.iconito { padding:10px; border-radius:100%; background:#C80A64; color:#d6d6d6;  }
+.iconito { 
+  padding:10px;
+  border-radius:100%;
+  background:#C80A64;
+  color:#d6d6d6;
+  background:none; 
+  border:none;
+  box-shadow:none;
+}
 .iconito:hover { background: rgb(0,0,0,0.8); color:#C80A64; }
+.iconito2 { 
+  border-radius:100%; 
+  color:#d6d6d6; 
+  font-size:28px; 
+  background:none; 
+  border:none;
+  box-shadow:none;
+}
 
 .row { padding:2% 4%; margin:0; }
 .flexin { display:flex; }
