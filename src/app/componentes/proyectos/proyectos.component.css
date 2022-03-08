@@ -5,10 +5,6 @@
 .proyecto {
     padding:0 2% 2% 2%;
 }
-
-.proyecto:first-child {
-    padding-top:2%;
-}
 .proyecto article { 
     border-bottom:1px #b6b6b6 solid;
     padding:0 0 2% 0;
@@ -52,4 +48,13 @@
     align-items: center;
     justify-content: center;
 }
-.mostrarModal:hover{ opacity:100%; }
+.mostrarModal:hover { opacity:100%; }
+
+
+@media (max-width:480px){
+    .proyectos { flex-direction:column; }
+    .proyecto { display:block; padding: 0 0 5% 0; margin:0 0 5% 0; border:0; }
+    .proyecto article { border:none; }
+    .proyectos:first-child { padding-top:5%; }
+    .proyectos article div { flex-direction:column; }
+}

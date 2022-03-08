@@ -1,6 +1,6 @@
 <div class="encabezado col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h2 class="titulo">Proyectos</h2>
-    <div>
+    <h2 class="titulo col-xs-12 col-sm-11 col-md-11 col-lg-11">Proyectos</h2>
+    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <a href="#">
             <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
         </a>
@@ -10,8 +10,8 @@
     </div>
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<ul class="flexin habilidades">
-<li *ngFor="let proyecto of proyectosLista">
+<ul class="flexin proyectos">
+<li class="proyecto" *ngFor="let proyecto of proyectosLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
         <div>
@@ -39,7 +39,7 @@
             <p>{{proyecto.descripcion}}</p>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <a href="#">
             <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
         </a>

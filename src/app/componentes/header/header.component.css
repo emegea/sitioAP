@@ -48,3 +48,7 @@ button.login:hover {
     background:#80063f;
     color:#d6d6d6;
 }
+
+@media (max-width:480px){
+    .banner { height:300px; }
+}

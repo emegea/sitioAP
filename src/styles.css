@@ -15,20 +15,19 @@ body {
   background: url(assets/img/fondo.png) fixed;
   background-size: cover;
 }
-h1, h2, h3, h4, h5, h6, p { font-family:'Inter', sans-serif; }
+h1, h2, h3, h4, h5, h6, p { font-family:'Inter', sans-serif; line-height:1.5rem; }
 h2, a { color:#C80A64; }
 a:hover { color:#80063f; }
 
 .socialmedia a, .socialmedia a:hover { transition:ease-in-out 5ms; }
 .agranda { padding:5px; transition:ease-in-out .2s; }
 .agranda:hover { padding:0px; transition:ease-in-out .2s; box-shadow: 0px 0px 30px 10px rgb(200 10 100 / 20%); }
-.iconitos { display:flex; justify-content:flex-end; }
+.iconitos { display:flex; justify-content:space-around; }
 .iconito { 
   padding:10px;
   border-radius:100%;
   background:#C80A64;
   color:#d6d6d6;
-  background:none; 
   border:none;
   box-shadow:none;
 }
@@ -66,5 +65,19 @@ a:hover { color:#80063f; }
 .progress-bar-striped {
   background-image: linear-gradient(45deg,
   #C80A64 25%, #111 25%, #111 50%, #C80A64 50%, #C80A64 75%, #111 75%, #111); 
+}
+
+@media (max-width:480px){
+  body p { font-size:0.9em; }
+  .row { margin:10% 6%; padding:0; }
+  .card { padding:10% 5% !important; }
+  .iconitos { flex-direction:row !important; justify-content:flex-end; }
+  .iconito { font-size:10px; padding: 5px; }
+  h1 { font-size:1.8rem !important; }
+  h2 { font-size:1.5rem !important; }
+  h3 { font-size:1.2rem !important; }
+  h4 { font-size:1rem !important; }
+  h5 { font-size:0.9rem !important; }
+  .titulo { font-size:1.5rem; }
 }
 

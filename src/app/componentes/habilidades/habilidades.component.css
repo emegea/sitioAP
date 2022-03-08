@@ -20,3 +20,10 @@
 .habilidad h4 {
     font-size:18px;
 }
+
+@media (max-width:480px){
+    .habilidad article { display:block; padding: 0 0 5% 0; margin:0 0 5% 0; }
+    .habilidad:first-child { padding-top:5%; }
+    .habilidad article div { flex-direction:column; }
+    .habilidad article div .progress { flex-direction:row; }
+}

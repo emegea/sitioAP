@@ -20,3 +20,10 @@
 .educacion h4 {
     font-size:18px;
 }
+
+@media (max-width:480px){
+    .educacion article { display:block;padding: 0 0 5% 0; margin:0 0 5% 0; }
+    .educacion:first-child { padding-top:5%; }
+    .educacion article div { flex-direction:column; }
+    .educacion article div img { display:none; }
+}
