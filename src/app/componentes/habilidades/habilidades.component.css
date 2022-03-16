@@ -1,3 +1,4 @@
+.habilidades ul { display:flex; }
 .habilidades ul li {
     margin:0 0 2% 0;
 }
@@ -25,5 +26,4 @@
     .habilidad article { display:block; padding: 0 0 5% 0; margin:0 0 5% 0; }
     .habilidad:first-child { padding-top:5%; }
     .habilidad article div { flex-direction:column; }
-    .habilidad article div .progress { flex-direction:row; }
 }
