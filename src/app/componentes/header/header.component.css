@@ -31,9 +31,7 @@
 .menu { display:flex; align-items:center; justify-content:space-evenly; }
 .menu a { color:#d6d6d6; }
 .menu a:hover { color:#C80A64; }
-.logoap {
-    width:200px;
-}
+.logoap { height:35px; }
 .formLogin {
     display:flex;
     align-items:center;
