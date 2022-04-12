@@ -15,6 +15,7 @@ body {
   background: url(assets/img/fondo.png) fixed;
   background-size: cover;
 }
+
 h1, h2, h3, h4, h5, h6, p { font-family:'Inter', sans-serif; line-height:1.5rem; }
 h2, a { color:#C80A64; }
 a:hover { color:#80063f; }
