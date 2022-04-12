@@ -13,6 +13,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { SocialComponent } from './componentes/social/social.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

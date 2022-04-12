@@ -1,6 +1,6 @@
 <div class="encabezado col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h2 class="titulo">Proyectos</h2>
-    <div>
+    <h2 class="titulo col-xs-12 col-sm-11 col-md-11 col-lg-11">Proyectos</h2>
+    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <a href="#">
             <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
         </a>
@@ -10,23 +10,36 @@
     </div>
 </div>
 <section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<ul class="flexin habilidades">
-<li *ngFor="let proyecto of proyectosLista">
+<ul class="flexin proyectos">
+<li class="proyecto" *ngFor="let proyecto of proyectosLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
         <div>
             <h3>{{proyecto.titulo}}</h3>
-            <img 
+            <div class="imagen">
+                <img 
                 [src]="proyecto.imagen"
-                class="img-fluid oscurece"
+                class="img-fluid"
                 alt="{{ proyecto.titulo }}"
-            >
-            <i class="fa fa-plus iconito mostrarModal" onclick="showEditProfileModal()"></i>
-
+                >
+                <div class="mostrarModal">
+                    <button id="abrirModal" class="fa-solid fa-circle-plus iconito2"></button>
+                </div>
+            </div>
+            <div id="proyectosModal" class="proyectosModal">
+                <img 
+                    [src]="proyecto.imagen"
+                    alt=""
+                    onclick="document.getElementById('modal01').style.display='flex'"
+                >
+                <div class="ocultarModal">
+                    <button id="cerrarModal" class="cerrarModal" class="fa-solid fa-circle-xmark iconito"></button>
+                </div>
+            </div>
             <p>{{proyecto.descripcion}}</p>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <a href="#">
             <i class="fa fa-trash iconito" onclick="showEditProfileModal()"></i>
         </a>

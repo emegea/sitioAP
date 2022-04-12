@@ -20,3 +20,11 @@
 .experiencia h4 {
     font-size:18px;
 }
+
+@media (max-width:480px){
+    .experiencia article { display:block;padding: 0 0 5% 0; margin:0 0 5% 0; }
+    .experiencia:first-child { padding-top:5%; }
+    .experiencia article div { flex-direction:column; }
+    .experiencia article div img { display:none; }
+
+}

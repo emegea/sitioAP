@@ -31,9 +31,7 @@
 .menu { display:flex; align-items:center; justify-content:space-evenly; }
 .menu a { color:#d6d6d6; }
 .menu a:hover { color:#C80A64; }
-.logoap {
-    width:200px;
-}
+.logoap { height:35px; }
 .formLogin {
     display:flex;
     align-items:center;
@@ -47,4 +45,8 @@ button.login:hover {
     border:1px solid #80063f;
     background:#80063f;
     color:#d6d6d6;
+}
+
+@media (max-width:480px){
+    .banner { height:300px; }
 }

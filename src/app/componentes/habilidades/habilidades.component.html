@@ -1,6 +1,6 @@
 <div class="encabezado col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h2 class="titulo">Habilidades</h2>
-    <div>
+    <h2 class="titulo col-xs-12 col-sm-11 col-md-11 col-lg-11">Habilidades</h2>
+    <div class="iconitos col-xs-12 col-sm-1 col-md-1 col-lg-1">
         <a href="#">
             <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
         </a>
@@ -9,24 +9,23 @@
         </a>
     </div>
 </div>
-<section class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<section class="habilidades card col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul>
 <li class="habilidad" *ngFor="let habilidad of habilidadesLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="flexin col-xs-12 col-sm-11 col-md-11 col-lg-11">
         <div>
             <h3>{{ habilidad.titulo }}</h3>
-            <div class="progress">
-                <div 
-                    class="progress-bar progress-bar-striped bg-success"
-                    role="progressbar"
-                    style="width:80%"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                >
-                </div>
-            </div>
+            <circle-progress
+                [percent]="85"
+                [radius]="100"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#C80A64'"
+                [innerStrokeColor]="'#111111'"
+                [animation]="true"
+                [animationDuration]="600">
+            </circle-progress>
             <p>Herramientas: {{ habilidad.herramientas }}
             <br>Implementación: {{ habilidad.implementacion }}
             <br>Criterio: {{ habilidad.criterio }}
