@@ -8,7 +8,7 @@ dl, ol, ul, p, a, h1, h2, h3, h4, h5, h6 {
   text-decoration:none !important;
   list-style:none !important;
 }
-*, *:hover, a, a:hover, img, img:hover, i, i:hover, button, button:hover
+a, a:hover, img, img:hover, i, i:hover, button, button:hover
 form, form:hover, ul, ul:hover, li, li:hover { transition:ease-in-out .2s; }
 
 body {
@@ -53,7 +53,7 @@ a:hover { color:#80063f; }
   font-size:2.5rem;
   font-weight:800;
 }
-.card { 
+.tarjeta { 
   display:flex; 
   justify-content:space-around;
   border:none;
@@ -71,7 +71,7 @@ a:hover { color:#80063f; }
 @media (max-width:480px){
   body p { font-size:0.9em; }
   .row { margin:10% 6%; padding:0; }
-  .card { padding:10% 5% !important; }
+  .tarjeta { padding:10% 5% !important; }
   .iconitos { flex-direction:row !important; justify-content:flex-end; }
   .iconito { font-size:10px; padding: 5px; }
   h1 { font-size:1.8rem !important; }

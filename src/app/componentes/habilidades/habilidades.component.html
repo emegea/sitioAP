@@ -9,7 +9,7 @@
         </a>
     </div>
 </div>
-<section class="habilidades card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<section class="habilidades tarjeta col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <ul>
 <li class="habilidad" *ngFor="let habilidad of habilidadesLista">
 <article class="flexin col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -17,7 +17,8 @@
         <div>
             <h3>{{ habilidad.titulo }}</h3>
             <circle-progress
-                [percent]="85"
+                [title]="habilidad.titulo"
+                [percent]="habilidad.porcentaje"
                 [radius]="100"
                 [outerStrokeWidth]="16"
                 [innerStrokeWidth]="8"
@@ -41,6 +42,6 @@
         </a>
     </div>
 </article>
-
+</li>
 </ul>
 </section>

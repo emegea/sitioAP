@@ -1,41 +1,54 @@
-<section class="flexin quiensoy col-xs-1 col-sm-12 col-md-12 col-lg-12">
+<section *ngFor="let persona of listaPersonas" class="flexin quiensoy col-xs-1 col-sm-12 col-md-12 col-lg-12">
     <div class="avatar">
-        <img class="img-fluid" 
-            [src]="datos.QuienSoy[0].avatar" 
-            title="{{ datos.QuienSoy[0].nombre }}"
-            alt="{{ datos.QuienSoy[0].nombre }}"
+        <img [src]="persona.url_img" 
+            class="img-fluid" 
+            title="{{persona.nombre}}" 
+            alt="{{persona.nombre}}" 
         />
         <a href="#">
             <i class="fa fa-pen iconito"></i>
         </a>
     </div>
     <div class="resumen">
-        <h2 class="titulo">{{ datos.QuienSoy[0].nombre }}</h2>
-        <h3>{{ datos.QuienSoy[0].puesto }}</h3>
-        <p>{{ datos.QuienSoy[0].ubicacion }}</p>      
+        <h2 class="titulo">{{persona.nombre}}</h2>
+        <h3>{{persona.email}}</h3>
+        <p>{{persona.provincia}}</p>      
         <ul>
             <li>
                 <a href="">
                     <i class="fa fa-envelope"></i>
-                    <p>{{ datos.QuienSoy[0].email }}</p>
+                    <p>{{persona.email}}</p>
                 </a>
             </li>
             <li>
                 <a href="">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <p>{{ datos.QuienSoy[0].telefono }}</p>
+                    <p>{{persona.telefono}}</p>
                 </a>
             </li>
         </ul>  
     </div>
+
+    <ul class="insignias">
+        <li *ngFor="let persona of listaPersonas">
+            <a href="{{persona.url_img}}" title="{{persona.url_img}}">
+                <img class="img-fluid" [src]="persona.url_img" />
+                <p [innerHTML]="persona.nombre"></p>
+            </a>
+        </li>
+    </ul>
+
+<!--
     <ul class="insignias">
         <li *ngFor="let insignia of insigniasLista">
-            <a href="{{ insignia.link }}" title="{{ insignia.alt }}">
+            <a href="{{insignia.link}}" title="{{insignia.alt}}">
                 <img class="img-fluid" [src]="insignia.imagen" />
                 <p [innerHTML]="insignia.titulo"></p>
             </a>
         </li>
     </ul>
+-->
+
 </section><!-- INFO -->
 
 <section class="botonesAbout">
@@ -44,24 +57,24 @@
     <button type="button" class="btn btn-light">Más</button>
 </section>
 
-<div class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="tarjeta col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div>
         <h2 class="titulo">Quién Soy ?<span>></span></h2>
         <a href="#">
             <i class="fa fa-pen iconito" onclick="showEditProfileModal()"></i>
         </a>
     </div>
-    <div class="quiensoyContenido col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p class="col-xs-12 col-sm-8 col-md-8 col-lg-7" [innerHTML]="datos.QuienSoy[0].acercaDe"></p>
+    <div *ngFor="let persona of listaPersonas" class="quiensoyContenido col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="col-xs-12 col-sm-8 col-md-8 col-lg-7" [innerHTML]="persona.acerca_de"></p>
         <ul class="flexin col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <li>
                 <img class="img-fluid" 
-                    [src]="datos.QuienSoy[0].avatar" 
-                    title="{{ datos.QuienSoy[0].nombre }}"
-                    alt="{{ datos.QuienSoy[0].nombre }}"
+                    [src]="persona.url_img" 
+                    title="{{persona.nombre}}"
+                    alt="{{persona.nombre}}"
                 />
             </li>
         </ul>
     </div>
-   
 </div>
+    <app-editar-persona class="row"></app-editar-persona>

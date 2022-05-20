@@ -4,12 +4,11 @@ import { ToastrService } from 'ngx-toastr';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
-  selector: 'app-quiensoy',
-  templateUrl: './quiensoy.component.html',
-  styleUrls: ['./quiensoy.component.css']
+  selector: 'app-editar-persona',
+  templateUrl: './editar-persona.component.html',
+  styleUrls: ['./editar-persona.component.css']
 })
-
-export class QuiensoyComponent implements OnInit {
+export class EditarPersonaComponent implements OnInit {
 
   listaPersonas: any [] = [];
   accion = 'Agregar';

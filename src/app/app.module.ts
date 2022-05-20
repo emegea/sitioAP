@@ -1,7 +1,15 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from "@angular/forms"
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AuthRoutingModule } from './auth/auth.routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { QuiensoyComponent } from './componentes/quiensoy/quiensoy.component';
@@ -11,9 +19,10 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { SocialComponent } from './componentes/social/social.component';
+import { EditarPersonaComponent } from './componentes/editar-persona/editar-persona.component';
 
-import { HttpClientModule } from '@angular/common/http';
-import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TarjetaComponent } from './componentes/tarjeta/tarjeta.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +34,20 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HabilidadesComponent,
     FooterComponent,
     SocialComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    TarjetaComponent,
+    EditarPersonaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    NgCircleProgressModule.forRoot({}),
+    AuthRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

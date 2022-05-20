@@ -1,0 +1,185 @@
+
+<!--
+// PERSONA: ID, APELLIDO, CUIDAD, EMAIL, NOMBRE, NOMBRE_USUARIO, PASSWORD, PROVINCIA, URL_IMG
+// PROYECTO: ID, DESCRIPCION_PROYECTO, IMG_PROYECTO, IMG_PROYECTO, TITULO_PROYECTO, URL_PROYECTO
+// HABILIDAD: ID, PORCENTAJE, TITULO_HABILIDAD
+// EXPERIENCIA: ID, FECHA_EXPERIENCIA, IMG_EMPRESA, IMG_EMPRESA, LOCALIDAD_EMPRESA, NOMBRE_EMPRESA, PUESTO, URL_EMPRESA 
+// EDUCACION: ID, FECHA_EDUCACION, IMG_DIPLOMA, INSTITUCION, LOCALIDAD, TITULO_EDUCACION, URL_DIPLOMA, FECHA_FIN, FECHA_INICIO
+-->
+
+<div class="container mt-5">
+    <div class="row mt-4">
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="titulo">{{ accion | uppercase }} PERSONA</h5>
+                    <form [formGroup]="form" (ngSubmit)="guardarPersona()"><!-- EDITAR PERSONA -->
+                        
+                        <!-- NOMBRE DE USUARIO -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"
+                                    [class.green-icon]="this.form.get('nombre_usuario')?.valid"
+                                    [class.red-icon]="this.form.get('nombre_usuario')?.invalid && this.form.get('nombre_usuario')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="nombre_usuario" maxlength="50" type="text" class="form-control" placeholder="Nombre de usuario">
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-lock"
+                                    [class.green-icon]="this.form.get('password')?.valid"
+                                    [class.red-icon]="this.form.get('password')?.invalid && this.form.get('password')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="password" maxlength="50" type="password" class="form-control" placeholder="Contraseña">
+                        </div>                        
+
+                        <!-- NOMBRE -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"
+                                    [class.green-icon]="this.form.get('nombre')?.valid"
+                                    [class.red-icon]="this.form.get('nombre')?.invalid && this.form.get('nombre')?.touched">
+                                </i>
+                            </span>
+                            <input formControlName="nombre" maxlength="50" type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        
+                        <!-- APELLIDO -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user-group"
+                                    [class.green-icon]="this.form.get('apellido')?.valid"
+                                    [class.red-icon]="this.form.get('apellido')?.invalid && this.form.get('apellido')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="apellido" maxlength="50" type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                                                
+                        <!-- FECHA DE NACIMIENTO -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-calendar-days"
+                                    [class.green-icon]="this.form.get('fecha_nac')?.valid"
+                                    [class.red-icon]="this.form.get('fecha_nac')?.invalid && this.form.get('fecha_nac')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="fecha_nac" maxlength="10" type="date" class="form-control" placeholder="Fecha de Nacimiento">
+                        </div>
+
+                        <!-- CIUDAD -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-location-dot"
+                                    [class.green-icon]="this.form.get('ciudad')?.valid"
+                                    [class.red-icon]="this.form.get('ciudad')?.invalid && this.form.get('ciudad')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="ciudad" maxlength="50" type="text" class="form-control" placeholder="Ciudad">
+                        </div>
+
+                        <!-- PROVINCIA -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-map-location-dot"
+                                    [class.green-icon]="this.form.get('provincia')?.valid"
+                                    [class.red-icon]="this.form.get('provincia')?.invalid && this.form.get('provincia')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="provincia" maxlength="50" type="text" class="form-control" placeholder="Provincia">
+                        </div>
+                        
+                        <!-- EMAIL -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-envelope"
+                                    [class.green-icon]="this.form.get('email')?.valid"
+                                    [class.red-icon]="this.form.get('email')?.invalid && this.form.get('email')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="email" maxlength="50" type="email" class="form-control" placeholder="Email">
+                        </div>
+
+                        <!-- TELEFONO -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-mobile-screen-button"
+                                    [class.green-icon]="this.form.get('telefono')?.valid"
+                                    [class.red-icon]="this.form.get('telefono')?.invalid && this.form.get('telefono')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="telefono" maxlength="50" type="text" class="form-control" placeholder="Teléfono">
+                        </div>
+
+                        <!-- IMAGEN -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-image"
+                                    [class.green-icon]="this.form.get('url_img')?.valid"
+                                    [class.red-icon]="this.form.get('url_img')?.invalid && this.form.get('url_img')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="url_img" maxlength="200" type="url" class="form-control" placeholder="URL de imagen">
+                        </div>
+                        
+                        <!-- ACERCA DE -->
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user-pen"
+                                    [class.green-icon]="this.form.get('acerca_de')?.valid"
+                                    [class.red-icon]="this.form.get('acerca_de')?.invalid && this.form.get('acerca_de')?.touched">    
+                                </i>
+                            </span>
+                            <input formControlName="acerca_de" maxlength="500" type="text" class="form-control" placeholder="Breve descripción">
+                        </div>
+
+
+                        <!-- BOTON ENVIAR -->
+                        <div class="d-grid gap-2">
+                            <button [disabled]="this.form.invalid" type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-database"></i>&nbsp; Aceptar
+                            </button>                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<!-- ////////////////////////////// -->
+<!-- ////////////////////////////// -->
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="titulo">LISTADO DE TARJETAS</h5>
+                    <table>
+                        <tbody>
+                            <tr *ngFor="let persona of listaPersonas; let i = index">
+                                <td>{{persona.nombre}}</td>
+                                <td>{{persona.apellido}}</td>
+                                <td>{{persona.ciudad}}</td>
+                                <td>{{persona.email}}</td>
+                                <td>{{persona.nombre_usuario}}</td>
+                                <td>{{persona.password}}</td>
+                                <td>{{persona.provincia}}</td>
+                                <td>{{persona.url_img}}</td>
+                                <td>
+                                    <i class="fa fa-pen iconito"></i>
+                                </td>
+<!--
+                                <td>
+                                    <i (click)="borrarPersona(i)" class="fa fa-trash iconito"></i>
+                                </td>
+-->                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
