@@ -54,7 +54,6 @@ a:hover { color:#80063f; }
   font-weight:800;
 }
 .tarjeta { 
-  display:flex; 
   justify-content:space-around;
   border:none;
   padding:2%; 

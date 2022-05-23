@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { AppComponent } from "./app.component";
+import { ModalComponent } from './componentes/modal/modal.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/auth', pathMatch: 'full' },
-  { path: 'auth', loadChildren: './auth/auth.module#AuthModule' }
+  { path:'modal', component:ModalComponent }
 ];
 
 @NgModule({
@@ -12,5 +11,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export class AuthRoutingModule { }
-//export const routing = RouterModule.forRoot(appRoutes);

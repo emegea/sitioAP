@@ -11,12 +11,15 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 
 export class QuiensoyComponent implements OnInit {
 
+  listaInsignias:any; // Esta lista es la que conecta al JSON
   listaPersonas: any [] = [];
   accion = 'Agregar';
   form: FormGroup;
   id: number | undefined;
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private datosPortfolio:PersonaService, //Acá llamo al service que carga el Json
+    private fb: FormBuilder,
     private toastr: ToastrService,
     private _personaService: PersonaService) { 
     this.form = this.fb.group({
@@ -36,8 +39,10 @@ export class QuiensoyComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarPersonas();
-  }
-
+    this.datosPortfolio.obtenerDatos().subscribe(data => {
+      this.listaInsignias=data.Insignias;
+    });
+}
   listarPersonas(){
     this._personaService.getListaPersonas().subscribe(data=> {
       console.log(data);

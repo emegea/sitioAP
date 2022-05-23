@@ -8,8 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule } from '@angular/forms';
 
-import { AuthRoutingModule } from './auth/auth.routing.module';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { QuiensoyComponent } from './componentes/quiensoy/quiensoy.component';
@@ -20,8 +18,7 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { FooterComponent } from './componentes/footer/footer.component';
 import { SocialComponent } from './componentes/social/social.component';
 import { EditarPersonaComponent } from './componentes/editar-persona/editar-persona.component';
-
-import { TarjetaComponent } from './componentes/tarjeta/tarjeta.component';
+import { ModalComponent } from './componentes/modal/modal.component';
 
 
 @NgModule({
@@ -35,8 +32,8 @@ import { TarjetaComponent } from './componentes/tarjeta/tarjeta.component';
     FooterComponent,
     SocialComponent,
     ExperienciaComponent,
-    TarjetaComponent,
-    EditarPersonaComponent
+    EditarPersonaComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +43,6 @@ import { TarjetaComponent } from './componentes/tarjeta/tarjeta.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgCircleProgressModule.forRoot({}),
-    AuthRoutingModule,
     FormsModule
   ],
   providers: [],

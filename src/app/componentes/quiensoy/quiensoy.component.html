@@ -30,33 +30,23 @@
     </div>
 
     <ul class="insignias">
-        <li *ngFor="let persona of listaPersonas">
-            <a href="{{persona.url_img}}" title="{{persona.url_img}}">
-                <img class="img-fluid" [src]="persona.url_img" />
-                <p [innerHTML]="persona.nombre"></p>
-            </a>
-        </li>
-    </ul>
-
-<!--
-    <ul class="insignias">
-        <li *ngFor="let insignia of insigniasLista">
+        <li *ngFor="let insignia of listaInsignias">
             <a href="{{insignia.link}}" title="{{insignia.alt}}">
                 <img class="img-fluid" [src]="insignia.imagen" />
                 <p [innerHTML]="insignia.titulo"></p>
             </a>
         </li>
     </ul>
--->
 
 </section><!-- INFO -->
 
+<!--
 <section class="botonesAbout">
     <button type="button" class="btn btn-primary">Tengo Interés en:</button>
     <button type="button" class="btn btn-light">Añadir Sección</button>
     <button type="button" class="btn btn-light">Más</button>
 </section>
-
+-->
 <div class="tarjeta col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div>
         <h2 class="titulo">Quién Soy ?<span>></span></h2>
